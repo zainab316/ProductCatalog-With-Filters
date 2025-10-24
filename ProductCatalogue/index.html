@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopSphere - Your Online Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ShopSphere</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+    <div class="nav-icons">
+      <span onclick="viewCart()">🛒 Cart (<span id="cartCount">0</span>)</span>
+      <span onclick="viewWishlist()">💖 Wishlist (<span id="wishCount">0</span>)</span>
+      <span onclick="viewAccount()">👤 My Account</span>
+    </div>
+  </header>
+
+  <div class="filters">
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Fashion">Fashion</option>
+      <option value="Home">Home</option>
+      <option value="Beauty">Beauty</option>
+      <option value="Sports">Sports</option>
+    </select>
+
+    <div>
+      <label>Price Range: </label>
+      <input type="range" id="priceRange" min="0" max="2000" step="50" value="2000">
+      <span id="priceValue">₹2000</span>
+    </div>
+  </div>
+
+  <div id="products"></div>
+
+  <footer>
+    © 2025 ShopSphere | Made by ShopShere ❤ 
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
